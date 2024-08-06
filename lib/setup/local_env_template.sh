@@ -7,13 +7,9 @@
 # settings local to an individual machine.
 ###############################################################################
 
-# Name of local Stata executable
+# Name of local executables
 export stataCmd="StataMP"
-
-# Name of local Python executable
 export pythonCmd="python3"
-
-# Name of local R executable
 export rCmd="Rscript"
 
 # Add other local settings required for your repository here
