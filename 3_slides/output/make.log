@@ -1,4 +1,9 @@
-make.sh started at 2024-08-06 07:04:31
+make.sh started at 2024-08-06 07:34:02
 Executing: bash my_shell_script.sh
-Hello world!
-make.sh finished at 2024-08-06 07:04:31
+Executing: latexmk my_project_slides.tex -pdf -bibtex
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 17 Mar. 2022. Version 4.77, version: 4.77.
+Latexmk: Nothing to do for 'my_project_slides.tex'.
+Latexmk: All targets (my_project_slides.pdf) are up-to-date
+make.sh finished at 2024-08-06 07:34:02

@@ -11,7 +11,7 @@ run_latex() {
     (latexmk "${programname}.tex" -pdf -bibtex >> "${logfile}" 2>&1)
 
     # Clean up
-    mv "${programname}.pdf" output
+    mv "${programname}.pdf" ../output
     rm -f "${programname}.aux"
     rm -f "${programname}.bbl"
     rm -f "${programname}.blg"

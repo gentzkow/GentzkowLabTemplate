@@ -1,6 +1,5 @@
-make.sh started at 2024-08-06 07:04:27
+make.sh started at 2024-08-06 07:18:54
 Executing: StataMP wrangle_data.do
-2024-08-06 07:04:28.025 StataMP[33188:1472787] WARNING: Secure coding is not enabled for restorable state! Enable secure coding by implementing NSApplicationDelegate.applicationSupportsSecureRestorableState: and returning YES.
 
   ___  ____  ____  ____  ____ ®
  /__    /   ____/   /   ____/      18.0
@@ -66,4 +65,4 @@ file ../output/mpg.dta saved
 
 . 
 end of do-file
-make.sh finished at 2024-08-06 07:04:28
+make.sh finished at 2024-08-06 07:18:55
