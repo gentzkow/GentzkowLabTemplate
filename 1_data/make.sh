@@ -16,7 +16,7 @@ source "${REPO_ROOT}/local_env.sh"
 source "${REPO_ROOT}/lib/shell/run_shell.sh"
 source "${REPO_ROOT}/lib/shell/run_python.sh"
 #source "${REPO_ROOT}/lib/shell/run_stata.sh"
-#source "${REPO_ROOT}/lib/shell/run_R.sh"
+source "${REPO_ROOT}/lib/shell/run_R.sh"
 #source "${REPO_ROOT}/lib/shell/run_latex.sh"
 
 # Clear output directory
@@ -42,8 +42,8 @@ echo -e "\n\nMaking module \033[35m${MODULE}\033[0m with shell ${SHELL}"
 
     cd source
     # run_shell my_shell_script.sh "${LOGFILE}"
-	run_python wrangle_data.py "${LOGFILE}"
-	# run_R my_r_script.R "${LOGFILE}"
+	# run_python wrangle_data.py "${LOGFILE}"
+	run_R wrangle_data.R "${LOGFILE}"
 	# run_stata my_r_script.do "${LOGFILE}"
     # run_latex my_latex_file.tex "${LOGFILE}"
 

@@ -1,80 +1,53 @@
-make.sh started at 2024-08-06 06:42:28
+make.sh started at 2024-08-06 06:52:43
 Executing: bash my_shell_script.sh
-Executing: python3 analyze_data.py
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:                  displ   R-squared:                       0.638
-Model:                            OLS   Adj. R-squared:                  0.636
-Method:                 Least Squares   F-statistic:                     408.2
-Date:                Tue, 06 Aug 2024   Prob (F-statistic):           4.74e-53
-Time:                        06:42:31   Log-Likelihood:                -272.70
-No. Observations:                 234   AIC:                             549.4
-Df Residuals:                     232   BIC:                             556.3
-Df Model:                           1                                         
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          t      P>|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-Intercept      7.5585      0.209     36.238      0.000       7.148       7.969
-cty           -0.2424      0.012    -20.205      0.000      -0.266      -0.219
-==============================================================================
-Omnibus:                       43.018   Durbin-Watson:                   0.965
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               72.324
-Skew:                           0.996   Prob(JB):                     1.97e-16
-Kurtosis:                       4.858   Cond. No.                         71.4
-==============================================================================
+Executing: Rscript analyze_data.R
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
-Notes:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:                  displ   R-squared:                       0.587
-Model:                            OLS   Adj. R-squared:                  0.585
-Method:                 Least Squares   F-statistic:                     329.5
-Date:                Tue, 06 Aug 2024   Prob (F-statistic):           2.04e-46
-Time:                        06:42:31   Log-Likelihood:                -288.07
-No. Observations:                 234   AIC:                             580.1
-Df Residuals:                     232   BIC:                             587.0
-Df Model:                           1                                         
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          t      P>|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-Intercept      7.3676      0.221     33.274      0.000       6.931       7.804
-hwy           -0.1662      0.009    -18.151      0.000      -0.184      -0.148
-==============================================================================
-Omnibus:                       54.692   Durbin-Watson:                   0.848
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):              104.320
-Skew:                           1.180   Prob(JB):                     2.22e-23
-Kurtosis:                       5.266   Cond. No.                         98.6
-==============================================================================
+Please cite as: 
 
-Notes:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:                  displ   R-squared:                       0.638
-Model:                            OLS   Adj. R-squared:                  0.635
-Method:                 Least Squares   F-statistic:                     203.3
-Date:                Tue, 06 Aug 2024   Prob (F-statistic):           1.17e-51
-Time:                        06:42:31   Log-Likelihood:                -272.68
-No. Observations:                 234   AIC:                             551.4
-Df Residuals:                     231   BIC:                             561.7
-Df Model:                           2                                         
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          t      P>|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-Intercept      7.5645      0.211     35.914      0.000       7.150       7.980
-cty           -0.2333      0.041     -5.699      0.000      -0.314      -0.153
-hwy           -0.0068      0.029     -0.232      0.817      -0.064       0.051
-==============================================================================
-Omnibus:                       43.908   Durbin-Watson:                   0.962
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               74.329
-Skew:                           1.012   Prob(JB):                     7.24e-17
-Kurtosis:                       4.879   Cond. No.                         123.
-==============================================================================
+ Hlavac, Marek (2022). stargazer: Well-Formatted Regression and Summary Statistics Tables.
+ R package version 5.2.3. https://CRAN.R-project.org/package=stargazer 
 
-Notes:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-make.sh finished at 2024-08-06 06:42:31
+
+% Table created by stargazer v.5.2.3 by Marek Hlavac, Social Policy Institute. E-mail: marek.hlavac at gmail.com
+% Date and time: Tue, Aug 06, 2024 - 06:52:44
+% Requires LaTeX packages: dcolumn 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Engine displacement (L)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ City fuel economy (mpg) & -0.242^{***} &  & -0.233^{***} \\ 
+  & (0.012) &  & (0.041) \\ 
+  & & & \\ 
+ Highway fuel economy (mpg) &  & -0.166^{***} & -0.007 \\ 
+  &  & (0.009) & (0.029) \\ 
+  & & & \\ 
+ Constant & 7.558^{***} & 7.368^{***} & 7.565^{***} \\ 
+  & (0.209) & (0.221) & (0.211) \\ 
+  & & & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{234} & \multicolumn{1}{c}{234} & \multicolumn{1}{c}{234} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.638} & \multicolumn{1}{c}{0.587} & \multicolumn{1}{c}{0.638} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.636} & \multicolumn{1}{c}{0.585} & \multicolumn{1}{c}{0.635} \\ 
+Residual Std. Error & \multicolumn{1}{c}{0.779 (df = 232)} & \multicolumn{1}{c}{0.832 (df = 232)} & \multicolumn{1}{c}{0.781 (df = 231)} \\ 
+F Statistic & \multicolumn{1}{c}{408.248$^{***}$ (df = 1; 232)} & \multicolumn{1}{c}{329.453$^{***}$ (df = 1; 232)} & \multicolumn{1}{c}{203.319$^{***}$ (df = 2; 231)} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+make.sh finished at 2024-08-06 06:52:46
