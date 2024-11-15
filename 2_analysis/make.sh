@@ -24,6 +24,7 @@ echo -e "\n\nMaking module \033[35m${MODULE}\033[0m with shell ${SHELL}"
 # Load settings & tools
 source "${REPO_ROOT}/local_env.sh"
 source "${REPO_ROOT}/lib/shell/run_shell.sh"
+source "${REPO_ROOT}/lib/shell/run_julia.sh"
 #source "${REPO_ROOT}/lib/shell/run_xxx.sh"
 
 # Clear output directory
@@ -33,7 +34,7 @@ mkdir -p "${MAKE_SCRIPT_DIR}/output"
 
 # Add symlink input files to local /input/ directory
 # (Make sure get_inputs.sh is updated to pull in all needed input files!)
-source "${MAKE_SCRIPT_DIR}/get_inputs.sh"
+# source "${MAKE_SCRIPT_DIR}/get_inputs.sh"
 
 # Run scripts
 # (Do this in a subshell so we return to the original working directory
@@ -44,6 +45,7 @@ source "${MAKE_SCRIPT_DIR}/get_inputs.sh"
 cd "${MAKE_SCRIPT_DIR}/source"
 
 run_shell my_shell_script.sh "${LOGFILE}" || exit 1
+run_julia analyze_data.jl "${LOGFILE}" || exit 1
 # run_xxx my_script.xx "${LOGFILE}" || exit 1
 ) || false
 
